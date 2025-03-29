@@ -1,0 +1,11 @@
+OBSIDIAN_DIR="$HOME/ObsidianVault"
+REPO_DIR="$HOME/GitHub/ObsidianSync"
+REMOTE_REPO="git@github.com:yourname/repo.git"
+BRANCH="main"
+
+EXCLUDE_PATTERNS=(
+    ".obsidian/"
+    ".trash/"
+    ".git/"
+    "*.tmp"
+)
