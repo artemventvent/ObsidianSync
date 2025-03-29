@@ -24,33 +24,34 @@ A simple bash script to sync your Obsidian vault with a GitHub repository.
 	```
 
 2. Install:
-```bash
-sudo make install
-```
+	```bash
+	sudo make install
+	```
 ## Configuration
 
 Edit ~/.config/obsync/config:
 ## Usage
 
 Basic:
-```bash
-  obsync -u  # Upload
-  obsync -d  # Download
-```
+	```bash
+ 	obsync -u  # Upload
+	obsync -d  # Download
+	```
 
 Options:
-  -u, --upload        Push to GitHub
-  -d, --download   Pull from GitHub
-  -c, --config         Custom config
-  -v, --verbose      Detailed output
-  -h, --help            Show help
-  --version             Display version
-
+	```bash
+  	-u, --upload        Push to GitHub
+  	-d, --download   Pull from GitHub
+  	-c, --config         Custom config
+	  -v, --verbose      Detailed output
+	  -h, --help            Show help
+  	--version             Display version
+	```	
 ## Uninstall
 
-```bash
-sudo make uninstall
-```
+	```bash
+	sudo make uninstall
+	```
 
 ## Requirements
 
