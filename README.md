@@ -10,7 +10,6 @@ A simple bash script to sync your Obsidian vault with a GitHub repository.
 
 - Two-way synchronization between Obsidian vault and GitHub
 - Rsync-based file transfers
-- Progress spinner UI
 - Custom exclude patterns
 - Private repo support
 - Easy Makefile installation
