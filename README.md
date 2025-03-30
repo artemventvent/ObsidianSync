@@ -59,11 +59,7 @@ obsync -d  # Download
 -h, --help            Show help
 --version             Display version
 ```	
-## Uninstall
 
-```bash
-sudo make uninstall
-```
 ## 📄Requirements
 
 - Bash 4.0+
