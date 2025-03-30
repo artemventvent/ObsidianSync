@@ -4,7 +4,7 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge&logo=obsidian&logoColor=white)
 
-A simple bash script to sync your Obsidian vault with a GitHub repository.
+**A simple bash script to sync your Obsidian vault with a GitHub repository.**
 
 ## 🔑 SSH Setup
 
@@ -23,11 +23,12 @@ A simple bash script to sync your Obsidian vault with a GitHub repository.
 
 ## 🚀 Installation
 ```bash
-git clone https://github.com/yourusername/obsync.git
+git clone https://github.com/artemventvent/ObsidianSync.git
 cd obsync
 sudo make install
 ```
-## ⚙️ Config Example (~/.config/obsync/config)
+## ⚙️ Config (~/.config/obsync/config)
+**Edit ~/.config/obsync/config**
 ```
 OBSIDIAN_DIR="$HOME/ObsidianVault"
 REPO_DIR="$HOME/GitHub/ObsidianSync"
@@ -41,16 +42,34 @@ EXCLUDE_PATTERNS=(
     "*.tmp"
 )
 ```
-## 🔄 Usage
-# Upload to GitHub
+## 🔄Usage
+
+**Basic**:
 ```bash
-obsync -u
-```
-# Download from GitHub
-```bash
-obsync -d
+obsync -u  # Upload
+obsync -d  # Download
 ```
 
+**Options**:
+```bash
+-u, --upload        Push to GitHub
+-d, --download   Pull from GitHub
+-c, --config         Custom config
+-v, --verbose      Detailed output
+-h, --help            Show help
+--version             Display version
+```	
+## Uninstall
+
+```bash
+sudo make uninstall
+```
+## 📄Requirements
+
+- Bash 4.0+
+- Git
+- rsync
+- GNU Make
 ## 🗑️ Uninstall
 
 ```bash
