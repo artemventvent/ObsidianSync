@@ -6,55 +6,53 @@
 
 A simple bash script to sync your Obsidian vault with a GitHub repository.
 
-## Features
+## 🔑 SSH Setup
 
-- Two-way synchronization between Obsidian vault and GitHub
-- Rsync-based file transfers
-- Custom exclude patterns
-- Private repo support
-- Easy Makefile installation
+1. Generate key:  
+    `ssh-keygen -t ed25519 -C "github_email@example.com"`
+    
+2. Add to GitHub:
+    
+- Copy key: `cat ~/.ssh/id_ed25519.pub`
+	
+- Paste here: [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
+    
+3. In config use:  
+    `REMOTE_REPO="git@github.com:user/repo.git"`
+    
 
-## Installation
-
-1. Clone repo:
-	```bash
-	git clone https://github.com/artemventvent/ObsidianSync.git
-	cd obsync
-	```
-
-2. Install:
-	```bash
-	sudo make install
-	```
-## Configuration
-
-Edit ~/.config/obsync/config:
-## Usage
-
-Basic:
+## 🚀 Installation
 ```bash
-obsync -u  # Upload
-obsync -d  # Download
+git clone https://github.com/yourusername/obsync.git
+cd obsync
+sudo make install
+```
+## ⚙️ Config Example (~/.config/obsync/config)
+```
+OBSIDIAN_DIR="$HOME/ObsidianVault"
+REPO_DIR="$HOME/GitHub/ObsidianSync"
+REMOTE_REPO="git@github.com:yourname/repo.git"
+BRANCH="main"
+
+EXCLUDE_PATTERNS=(
+    ".obsidian/"
+    ".trash/"
+    ".git/"
+    "*.tmp"
+)
+```
+## 🔄 Usage
+# Upload to GitHub
+```bash
+obsync -u
+```
+# Download from GitHub
+```bash
+obsync -d
 ```
 
-Options:
-```bash
--u, --upload        Push to GitHub
--d, --download   Pull from GitHub
--c, --config         Custom config
--v, --verbose      Detailed output
--h, --help            Show help
---version             Display version
-```	
-## Uninstall
+## 🗑️ Uninstall
 
 ```bash
 sudo make uninstall
 ```
-
-## Requirements
-
-- Bash 4.0+
-- Git
-- rsync
-- GNU Make
