@@ -18,7 +18,7 @@ A simple bash script to sync your Obsidian vault with a GitHub repository.
 
 1. Clone repo:
 	```bash
-	git clone https://github.com/yourusername/obsync.git
+	git clone git@github.com:artemventvent/ObsidianSync.git
 	cd obsync
 	```
 
