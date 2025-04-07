@@ -24,7 +24,7 @@
 ## 🚀 Installation
 ```bash
 git clone https://github.com/artemventvent/ObsidianSync.git
-cd obsync
+cd ObsidianSync
 sudo make install
 ```
 ## ⚙️ Config (~/.config/obsync/config)
